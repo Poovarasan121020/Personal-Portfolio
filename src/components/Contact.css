@@ -1,0 +1,66 @@
+
+.contact-intro {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.98rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.1rem;
+  max-width: 860px;
+  margin: 0 auto 3rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.4rem;
+  font-size: 0.86rem;
+  color: var(--muted);
+  word-break: break-all;
+  transition: all var(--transition);
+}
+
+.contact-card:not(.no-link):hover {
+  border-color: rgba(0, 229, 255, 0.4);
+  color: var(--accent);
+  box-shadow: 0 8px 25px rgba(0, 229, 255, 0.09);
+  transform: translateY(-3px);
+}
+
+.c-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.resume-cta {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.btn-resume-big {
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  color: #fff;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all var(--transition);
+  box-shadow: 0 4px 20px rgba(0, 229, 255, 0.2);
+}
+
+.btn-resume-big:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(0, 229, 255, 0.38);
+}

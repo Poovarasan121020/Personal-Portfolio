@@ -1,0 +1,31 @@
+.timeline {
+  position:relative; max-width:800px; margin:0 auto; padding-left:2rem;
+}
+.timeline::before {
+  content:''; position:absolute; left:0; top:0; bottom:0; width:2px;
+  background:linear-gradient(180deg, var(--accent), var(--accent2), transparent);
+}
+.tl-item { position:relative; margin-bottom:2.5rem; padding-left:2.5rem; }
+.tl-dot  {
+  position:absolute; left:-2rem; top:8px;
+  width:13px; height:13px; background:var(--accent); border-radius:50%;
+  box-shadow:0 0 12px rgba(0,229,255,0.5); transform:translateX(-5px);
+}
+.tl-card {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--radius); padding:1.5rem;
+  transition:border-color var(--transition), box-shadow var(--transition);
+}
+.tl-card:hover { border-color:rgba(0,229,255,0.3); box-shadow:0 8px 25px rgba(0,0,0,0.2); }
+.tl-header {
+  display:flex; justify-content:space-between; align-items:flex-start;
+  flex-wrap:wrap; gap:0.5rem; margin-bottom:0.3rem;
+}
+.tl-card h3  { font-size:1rem; }
+.tl-date     { font-family:var(--font-mono); font-size:0.76rem; color:var(--accent); white-space:nowrap; }
+.tl-company  { font-size:0.83rem; color:var(--muted); font-style:italic; margin-bottom:0.8rem; }
+.tl-card ul  { display:flex; flex-direction:column; gap:0.35rem; }
+.tl-card li  { font-size:0.85rem; color:var(--muted); padding-left:1rem; position:relative; }
+.tl-card li::before { content:'→'; position:absolute; left:0; color:var(--accent); }
+
+@media (max-width:768px) { .tl-header { flex-direction:column; } }
